@@ -36,6 +36,18 @@
 
 [[projects]]
   branch = "master"
+  name = "github.com/sirkuttin/edge_vehicle_data"
+  packages = ["."]
+  revision = "4084383b56b7bc2456f61bd7d5bd52127d1f082f"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/sirkuttin/mqtt"
+  packages = ["."]
+  revision = "6db8443b36abea54f933cb5fa2cdbeaa8b56c59a"
+
+[[projects]]
+  branch = "master"
   name = "golang.org/x/net"
   packages = [
     "internal/socks",
@@ -47,6 +59,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "26caa88239dab2496fbdc038e46f541690929f9b79f23e5b51e67df42c63594f"
+  inputs-digest = "4b435b2fbefa5481b2e387b54248dc1dad9582f7008f7e79ea8c1350142f7ddd"
   solver-name = "gps-cdcl"
   solver-version = 1

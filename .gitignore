@@ -16,3 +16,5 @@
 \.idea/
 
 vendor/
+
+cloud_api_to_edge_mqtt
