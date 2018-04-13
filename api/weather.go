@@ -1,7 +1,6 @@
-package routes
+package api
 
 import (
-	"github.com/sirkuttin/mqtt"
 	"net/http"
 	"github.com/sirkuttin/edge_vehicle_data"
 	"encoding/json"
@@ -10,9 +9,11 @@ import (
 	"encoding/binary"
 )
 
-func SendWeather(mqttClient mqtt.Mqtt) http.HandlerFunc {
+func sendWeather() http.HandlerFunc {
 	return func(responseWriter http.ResponseWriter, request *http.Request) {
 		bodyBytes := GetPayloadBytes(request.Body)
+		log.Debug("weather post body = ", string(bodyBytes))
+
 		var weather data.Weather
 		json.Unmarshal(bodyBytes,&weather)
 		err := weather.Validate()

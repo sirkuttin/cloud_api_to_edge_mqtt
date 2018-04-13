@@ -1,7 +1,6 @@
-package routes
+package api
 
 import (
-	"github.com/sirkuttin/mqtt"
 	"net/http"
 	"encoding/json"
 	"fmt"
@@ -10,11 +9,13 @@ import (
 	"bytes"
 )
 
-func SendAlert(mqttClient mqtt.Mqtt) http.HandlerFunc {
+func sendAlert() http.HandlerFunc {
 	return func(responseWriter http.ResponseWriter, request *http.Request) {
-		body_bytes := GetPayloadBytes(request.Body)
+		bodyBytes := GetPayloadBytes(request.Body)
+		log.Debug("alert post body = ", string(bodyBytes))
+
 		var alert data.Alert
-		json.Unmarshal(body_bytes,&alert)
+		json.Unmarshal(bodyBytes, &alert)
 		err := alert.Validate()
 		if err != nil {
 			fmt.Fprintf(responseWriter, err.Error())
