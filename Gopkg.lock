@@ -2,6 +2,12 @@
 
 
 [[projects]]
+  name = "github.com/Sirupsen/logrus"
+  packages = ["."]
+  revision = "c155da19408a8799da419ed3eeb0cb5db0ad5dbc"
+  version = "v1.0.5"
+
+[[projects]]
   name = "github.com/eclipse/paho.mqtt.golang"
   packages = [
     ".",
@@ -44,7 +50,13 @@
   branch = "master"
   name = "github.com/sirkuttin/mqtt"
   packages = ["."]
-  revision = "6db8443b36abea54f933cb5fa2cdbeaa8b56c59a"
+  revision = "44c0f838cf428a77cd86b777f6fe2aff43ceb237"
+
+[[projects]]
+  branch = "master"
+  name = "golang.org/x/crypto"
+  packages = ["ssh/terminal"]
+  revision = "d6449816ce06963d9d136eee5a56fca5b0616e7e"
 
 [[projects]]
   branch = "master"
@@ -56,9 +68,18 @@
   ]
   revision = "61147c48b25b599e5b561d2e9c4f3e1ef489ca41"
 
+[[projects]]
+  branch = "master"
+  name = "golang.org/x/sys"
+  packages = [
+    "unix",
+    "windows"
+  ]
+  revision = "3b87a42e500a6dc65dae1a55d0b641295971163e"
+
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "4b435b2fbefa5481b2e387b54248dc1dad9582f7008f7e79ea8c1350142f7ddd"
+  inputs-digest = "102bfa5ae411802d98c77e2352ec3b590173c0c265835928b830493e52a4d0a1"
   solver-name = "gps-cdcl"
   solver-version = 1
